@@ -30,6 +30,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'ansible-playbook playbook.yml -i hosts.ini'
+                sh 'ls -l target/'
             }
         }
 
